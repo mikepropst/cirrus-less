@@ -1,0 +1,50 @@
+//## Type Colors
+.type-dark { color: @type-dark }
+.type-med { color: @type-med }
+.type-light { color: @type-light } 
+
+
+//## partially overrides buttons.less
+.btn {
+	padding-left: @padding-base-horizontal*2;
+	padding-right: @padding-base-horizontal*2;
+	border-width: 2px;
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		background: #d4dde9;
+		border-color: #d4dde9;
+		color: #fff;
+	}
+}
+
+.btn-primary, .btn-purchase, .btn-danger {
+	text-shadow: 1px 1px rgba(0,0,0,0.15);
+}
+
+//## form stuff
+
+
+//## color the placeholder text
+.has-success input[type=text]::-webkit-input-placeholder { color: @state-success-text; }
+.has-success input[type=text]:-moz-placeholder { color: @state-success-text;  }
+.has-success input[type=text]::-moz-placeholder {  color: @state-success-text;  }
+.has-success input[type=text]:-ms-input-placeholder {  color: @state-success-text;  }
+
+.has-error input[type=text]::-webkit-input-placeholder { color: @state-danger-text; }
+.has-error input[type=text]:-moz-placeholder { color: @state-danger-text;  }
+.has-error input[type=text]::-moz-placeholder {  color: @state-danger-text;  }
+.has-error input[type=text]:-ms-input-placeholder {  color: @state-danger-text;  }
+
+
+//## disabled fields: this overrides forms.less
+.form-control {
+	&[disabled] {
+		border-color: @input-border-disabled;
+	}
+}
+
+input[type=text]:disabled::-webkit-input-placeholder { color: @input-text-disabled; }
+input[type=text]:disabled:-moz-placeholder { color: @input-text-disabled;  }
+input[type=text]:disabled::-moz-placeholder {  color: @input-text-disabled;  }
+input[type=text]:disabled:-ms-input-placeholder {  color: @input-text-disabled;  }
